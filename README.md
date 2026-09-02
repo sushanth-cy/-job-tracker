@@ -7,9 +7,10 @@ progress, and keep notes and posting links attached to each one.
 Built as a first full-stack project: a real backend with a database, not
 just a frontend talking to someone else's API.
 
-**[Live demo →](#)** *(add your deployed link here once you publish it)*
+**[Live demo →](#https://job-tracker-rumg.onrender.com/)** 
 
-![screenshot](screenshot.png)
+![screenshot](<img width="1913" height="1007" alt="image" src="https://github.com/user-attachments/assets/17de8c30-6c63-4ad1-9a8d-82144c18afe8" />
+)
 *(replace with an actual screenshot once you run it)*
 
 ## Features
