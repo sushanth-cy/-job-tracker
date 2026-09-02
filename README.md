@@ -11,7 +11,6 @@ just a frontend talking to someone else's API.
 
 ![screenshot](<img width="1913" height="1007" alt="image" src="https://github.com/user-attachments/assets/17de8c30-6c63-4ad1-9a8d-82144c18afe8" />
 )
-*(replace with an actual screenshot once you run it)*
 
 ## Features
 
