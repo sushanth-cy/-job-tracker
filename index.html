@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field — Job Application Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark">▤</span>
+        <h1>Field</h1>
+      </div>
+      <p class="tagline">Every application, filed and tracked.</p>
+    </div>
+    <button id="newBtn" class="new-btn" type="button">+ Log an application</button>
+  </header>
+
+  <div class="search-bar">
+    <input type="search" id="searchInput" placeholder="Search by company or role…" aria-label="Search applications">
+    <span id="searchCount" class="search-count"></span>
+  </div>
+
+  <main class="board" id="board">
+    <!-- Columns are built by script.js, one per status -->
+  </main>
+
+  <p id="emptyState" class="empty-state" hidden>
+    Nothing filed yet. Click "Log an application" to start tracking your search.
+  </p>
+
+  <!-- Modal: add / edit -->
+  <div id="modalOverlay" class="modal-overlay" hidden>
+    <form id="appForm" class="card-form" novalidate>
+      <div class="form-header">
+        <h2 id="formTitle">New application</h2>
+        <button type="button" id="closeBtn" class="close-btn" aria-label="Close">✕</button>
+      </div>
+
+      <input type="hidden" id="appId" value="">
+
+      <div class="form-row">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required autocomplete="off">
+      </div>
+
+      <div class="form-row">
+        <label for="role">Role</label>
+        <input type="text" id="role" name="role" required autocomplete="off">
+      </div>
+
+      <div class="form-row form-row-split">
+        <div>
+          <label for="status">Status</label>
+          <select id="status" name="status">
+            <option value="applied">Applied</option>
+            <option value="interview">Interviewing</option>
+            <option value="offer">Offer</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </div>
+        <div>
+          <label for="date_applied">Date applied</label>
+          <input type="date" id="date_applied" name="date_applied" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="link">Posting link <span class="optional">(optional)</span></label>
+        <input type="url" id="link" name="link" placeholder="https://…">
+      </div>
+
+      <div class="form-row">
+        <label for="notes">Notes <span class="optional">(optional)</span></label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Recruiter contact, interview prep, salary range…"></textarea>
+      </div>
+
+      <p id="formError" class="form-error" hidden></p>
+
+      <div class="form-actions">
+        <button type="button" id="deleteBtn" class="delete-btn" hidden>Delete</button>
+        <div class="form-actions-right">
+          <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+          <button type="submit" class="save-btn">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

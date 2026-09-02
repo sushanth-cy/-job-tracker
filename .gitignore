@@ -1,0 +1,6 @@
+node_modules/
+applications.db
+applications.db-journal
+applications.db-wal
+applications.db-shm
+.env

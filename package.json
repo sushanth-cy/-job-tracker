@@ -1,0 +1,16 @@
+{
+  "name": "job-application-tracker",
+  "version": "1.0.0",
+  "description": "A small full-stack app for tracking job applications — Node/Express backend, SQLite database, vanilla JS frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.19.2"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true
+  }
+}
